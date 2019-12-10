@@ -1,1 +1,1 @@
-# VisualizingDoubles-a-drunk-view-of-the-world-
+# VisualizingDoubles
