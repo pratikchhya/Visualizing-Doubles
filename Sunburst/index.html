@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sunburst</title>
+  </head>
+  <body>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <div id="myDiv"></div>
+    <div id="observablehq-6c725862"></div>
+    <script type="module">
+      import {
+        Runtime,
+        Inspector
+      } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+      import define from "https://api.observablehq.com/@d3/zoomable-sunburst.js?v=3";
+      const inspect = Inspector.into("#observablehq-6c725862");
+      new Runtime().module(define, name => name === "chart" && inspect());
+    </script>
+
+    <script src="sunburst.js"></script>
+  </body>
+</html>
