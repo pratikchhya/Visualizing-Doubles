@@ -1,70 +1,33 @@
-var data = [
-  {
-    type: "sunburst",
-    labels: [
-      "Top Fermenting",
-      "Bottom Fermenting",
-      "Wheat",
-      "Stout",
-      "Porter",
-      "Ales",
-      "Lager",
-      "Vienna",
-      "Munich",
-      "Pure Yeasts",
-      "Lactic Fermentation",
-      "Spontaneous Fermanetation",
-      "Belgian Witbier / White / Blanche",
-      "German Weissbier",
-      "Hefe-Weizen",
-      "Dunkel-Weizen",
-      "Weizenbock",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
-    parents: [
-      "",
-      "",
-      "Top Fermenting",
-      "Top Fermenting",
-      "Top Fermenting",
-      "Top Fermenting",
-      "Bottom Fermenting",
-      "Bottom Fermenting",
-      "Bottom Fermenting",
-      "Wheat",
-      "Wheat",
-      "Wheat",
-      "Pure Yeasts",
-      "Pure Yeasts",
-      "Pure Yeasts",
-      "Pure Yeasts",
-      "Pure Yeasts",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
-    values: [10, 14, 12, 10, 4, 6, 6, 4, 4, 3, 5, 6, 7, 6, 5, 4, 3],
-    outsidetextfont: { size: 20, color: "#377eb8" },
-    leaf: { opacity: 0.4 },
-    marker: { line: { width: 2 } }
-  }
-];
+// get the data from CSV
+d3.csv("beer_styles.csv").then(function(beers) {
+  console.log(beers);
 
-var layout = {
-  margin: { l: 0, r: 0, b: 0, t: 0 },
-  width: 500,
-  height: 500
-};
+  // define var STYLE and PARENT
+  var styles = beers.map(wheel => wheel.styles);
+  //console.log(styles); // just a check for the output
+  var parent = beers.map(wheel => wheel.parent);
+  //console.log(parent);  // just a check for the output
 
-Plotly.newPlot("myDiv", data, layout, { showSendToCloud: true });
+  // Defining the data for the sunburst
+  var data = [
+    {
+      type: "sunburst",
+      ids: styles,
+      labels: styles,
+      parents: parent,
+      // values: [10, 14, 12, 10, 4, 6, 6, 4, 4, 3, 5, 6, 7, 6, 5, 4, 3],
+      // outsidetextfont: { size: 20, color: "#377eb8" },
+      leaf: { opacity: 0.4 },
+      marker: { line: { width: 2 } }
+    }
+  ];
+
+  // layout definition
+  var layout = {
+    margin: { l: 0, r: 0, b: 0, t: 0 },
+    width: 1000,
+    height: 1000
+  };
+
+  Plotly.newPlot("myDiv", data, layout, { showSendToCloud: true });
+});
