@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Beer Data</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <!-- Bootstrap/Bootswatch CSS -->
+   <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        
+   <script src="https://d3js.org/d3.v5.min.js"></script>
+   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+   <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+   <script src="https://cdn.anychart.com/releases/v8/js/anychart-tag-cloud.min.js"></script>
+   <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-data-adapter.min.js"></script>
+   
+<style>
+  #history {
+    background-image: url("images/beer.jpg");
+    background-size: cover;
+    background-position: center;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    height: 100vh;
+    padding:0;
+    margin:0;
+}
+
+.intro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#chart1, #chart2 {
+  width: 100%;
+  height: 500px;
+  margin: 0;
+  padding: 0;
+  }
+</style>
+
+</head>
+
+<body>
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top p-1">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">Beer</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation" style="">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="visualization.html">Fun Facts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="data.html">Data</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="map.html">Breweries</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+        <!-- About Section -->
+  <div id="history">
+    <div class="intro">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h1 style="font-size: 50px; color:black; text-align: center">Interesting Facts about Beer</h1>
+            <p style="font-size: 30px; color:black; text-align: center">Every year, Americans celebrate National Beer Day on April 7. If you're out with friends and run out of things to talk about, here are some beer facts to share.</p>
+          </div>
+        </div>
+      </div>
+      </div>
+  </div>
+
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12"> 
+                  <h3 class="title" style="text-align: center; font-size:50px; text-decoration: underline;">Beer Styles</h3>
+                    <div id="myDiv"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="line">
+
+        <section id="facts" style="background-color: black;">
+        <div class="container" style="height: 200px; padding-top: 60px;">
+          <div class="row">
+
+            <div class="col-md-6 mx-auto" style="text-align: center">
+                <div data-aos="fade-up" >
+                    <h1 class="animations" style="color:white;">30.09</h1>
+                    <h6 style="color:white;">Average Gallons of Beer Consumed Per Capita</h6>
+                </div>
+                </div>
+    
+            <div class="col-md-6 mx-auto" style="text-align: center">
+                <div data-aos="fade-up">
+                <h1 class="animations" style="color:white;">American IPA</h1>
+                <h6 style="color:white;">Most commonly used Beer Style</h6></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+          <br>
+                <!-- Plots Section -->
+          <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                        <h3 class="title" style="text-align: center; font-size:50px; text-decoration: underline;">Beer consumption per state</h3>
+                          <div id="chart1"></div>
+                </div>
+              </div>
+            </div>
+
+            <br>
+            <hr size="30">
+
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                        <h3 class="title" style="text-align: center; font-size:50px; text-decoration: underline;">Most commonly used Beer Style</h3>
+                          <div id="chart2"></div>
+                </div>
+              </div>
+            </div>
+
+
+    <script src="js/sunburst.js"></script>
+    <script src="js/consumption.js"></script>
+    <script src="js/stylecloud.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+
+</html>
