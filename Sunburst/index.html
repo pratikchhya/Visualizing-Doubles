@@ -3,11 +3,89 @@
   <head>
     <meta charset="UTF-8" />
     <title>Sunburst</title>
+    <!-- Bootstrap/Bootswatch CSS -->
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/4/lux/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-tag-cloud.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-data-adapter.min.js"></script>
   </head>
   <body>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <div id="myDiv"></div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          <h3
+            class="title"
+            style="text-align: center; font-size:50px; text-decoration: underline;"
+          >
+            Beer Styles
+          </h3>
+          <div id="myDiv"></div>
+        </div>
+        <div class="col-md-3">
+          <br />
+          <br />
+          <h3 class="Style_Info" style="text-align: center">
+            <strong>Style Info</strong>
+          </h3>
+          <br />
+          <br />
+          <h4 class="Style_text"></h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          <div id="myDiv"></div>
+        </div>
+        <div class="col-md-3">
+          <div id="table-area" class="">
+            <h4 class="Style_Info"><strong>Style Info</strong></h4>
+            <table id="style_table" class="table table-striped">
+              <thead>
+                <tr>
+                  <th class="table-head">ABV%</th>
+                  <th class="table-head">IBU</th>
+                  <th class="table-head">Style Description</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <br />
+          </div>
+        </div>
+      </div>
+    </div> -->
     <script src="sunburst.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+      integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
