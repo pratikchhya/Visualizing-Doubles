@@ -1,114 +1,50 @@
-// Getting references
-var $tbody = document.querySelector("#table-body");
+// from data.js
+var tableData = dataSet;
+console.log(tableData);
 
-var $breweryInput = document.querySelector("#brewery-input");
-var $cityInput = document.querySelector("#city-input");
-var $sateInput = document.querySelector("#state-input");
-var $abvInput = document.querySelector("#abv-input");
-var $ratingInput = document.querySelector("#rating-input");
+var tbody = d3.select("tbody");
+console.log(dataSet);
 
+dataSet.forEach(function(breweryData){
+    console.log(breweryData);
+    var row = tbody.append("tr");
+    Object.entries(breweryData).forEach(function([key,value]){
+        console.log(key,value);
+        var cell = tbody.append("td");
+        cell.text(value);
+    });
+});
 
-var $submitButton = document.querySelector("#submit");
+var button = d3.select("#filter-btn");
 
-// Filtered list
-var beerData = dataSet;
+button.on("click", function(event){
+    d3.event.preventDefault();
+    tbody.html("");
+    var inputElement = d3.select("#brewery_name").property("value");
+    var cityInput=d3.select("#city").property("value");
+    var styleInput=d3.select("#style").property("value");
+    var ratingInput=d3.select("#rating").property("value");
 
-// Rendering table
-renderTable();
-
-// Function to render table
-function renderTable() {
-
-    // Looping through data set
-    for (var i = 0; i < beerData.length; i++) {
+    var filterData=tableData;
+    if (inputElement){
+        filterData = filterData.filter(row => row.brewery_name === inputElement); 
+    }
+    if (cityInput){
+        filterData = filterData.filter(row => row.city === cityInput);       
+    }
+    if (styleInput){
+        filterData = filterData.filter(row => row.style === styleInput);       
+    }
+    if (ratingInput){
+        filterData = filterData.filter(row => row.rating === ratingInput);       
+    }
     
-        // Insert a row
-        var $row = $tbody.insertRow(i);
 
-        // Get current object & keys
-        var currentData = beerData[i];
-        var fields = Object.keys(currentData);
-
-        // Insert beerData
-        for(var j = 0; j < fields.length; j++) {
-            var field = fields[j];
-            var $cell = $row.insertCell(j);
-            $cell.innerText = currentData[field];
-        };
-    };
-};
-
-// Event listener for submit button
-$submitButton.addEventListener("click", filterInput);
-
-// Function to filter brewery
-function filterBrewery(data) {
-    return data.brewery == $breweryInput.value.trim();
-};
-// filter for city
-function filterCity(data) {
-    return data.city == $cityInput.value.trim();
-};
-
-// filter for state
-function filterState(data) {
-    return data.state == $stateInput.value.trim();
-};
-
-// Function to filter abv
-function filterAbv(data) {
-    return data.abv == $abvInput.value.trim();
-};
-
-// Function to filter rating
-function filterRating(data) {
-    return data.rating == $ratingInput.value.trim();
-};
-
-// Function to filter input
-function filterInput(event) {
-
-    // Prevent default
-    event.preventDefault();
-
-    // Reseting data set each time button is clicked
-    beerData = dataSet;
-
-    // Filters
-
-    if ($breweryInput.value) {
-        beerData = beerData.filter(filterBrewery);
-    };
-
-    if ($cityInput.value) {
-        beerData = beerData.filter(filterCity);
-    };
-
-    if ($stateInput.value) {
-        beerData = beerData.filter(filterState);
-    };
-
-    if ($abvInput.value) {
-        beerData = beerData.filter(filterAbv);
-    };
-
-    if ($ratingInput.value) {
-        beerData = beerData.filter(filterRating);
-    };
-
-    if (!$breweryInput && !$cityInput && !$stateInput && !$abvInput && !$ratingInput) {
-        beerData = dataSet;
-    };
-
-    // Reset inputs
-
-    $breweryInput.value = "";
-    $cityInput.value = "";
-    $stateInput.value = "";
-    $abvInput.value = "";
-    $ratingInput.value = "";
-
-    // Re-render table
-    $tbody.innerHTML = "";
-    renderTable();
-};
+    filterData.forEach(function(data){
+        var row=tbody.append("tr");
+        Object.entries(data).forEach(function([key,value]){
+        var cell=tbody.append("td");
+        cell.text(value);
+            });
+        });
+    });
