@@ -19,6 +19,7 @@
     <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
     <script src="https://cdn.anychart.com/releases/v8/js/anychart-tag-cloud.min.js"></script>
     <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-data-adapter.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
     <script src="https://d3js.org/d3.v5.min.js"></script>
@@ -27,13 +28,14 @@
     <div class="container">
       <div class="row">
         <div class="col-md-9">
-          <h3
-            class="title"
-            style="text-align: center; font-size:50px; text-decoration: underline;"
-          >
+          <br />
+          <h3 class="title" style="text-align: center; font-size:50px;">
             Beer Styles
           </h3>
+          <br />
+          <br />
           <div id="myDiv"></div>
+          <div id="popup" style="display: none">description text here</div>
         </div>
         <div class="col-md-3">
           <br />
