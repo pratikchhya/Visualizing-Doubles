@@ -1,36 +1,29 @@
-// Create word cloud
-anychart.onDocumentReady(function() {
+Plotly.d3.csv('data/beer_consumption_df.csv', function(err, rows){
+  function unpack(rows, key) {
+return rows.map(function(row) { return row[key]; });
+}
+var data = [{
+type: 'choropleth',
+locationmode: 'USA-states',
+locations: unpack(rows, 'state'),
+z: unpack(rows, 'Consumption_in_gallons'),
+text: unpack(rows, 'State'),
+colorscale: [
+[0, 'rgb(255,256,0)'],
+[0.4, 'rgb(255,191,0)'], [0.6, 'rgb(242,142,28)'],
+[0.8, 'rgb(165,42,42)'], [1, 'rgb(165,42,42)']
+],
+}];
 
-    // create a tag (word) cloud chart
-
-   anychart.data.loadCsvFile('data/beer_consumption.csv', function (data) {
-
-     var chart = anychart.tagCloud(data);
-
-     // set a chart title
-     //chart.title('Beer consumption per state');
-     chart.normal().fontWeight(600);
-     chart.hovered().fill("#66ff66");
-
-
-     // set an array of angles at which the words will be laid out
-     chart.angles([0]); 
-     // // configure angles
-     chart.angles([-30,10,-40]);
-    
-     // set text spacing
-     chart.textSpacing(1);
-
-     var tooltip = chart.tooltip();
-     // enable HTML for tooltips
-     chart.tooltip().useHtml(true);
-     // configure tooltips
-     var formatter = "Beer consumption: {%value}gallons"
-    
-      var tooltip = chart.tooltip();
-      tooltip.format(formatter);
-
-     // display the word cloud chart
-     chart.container("chart1").draw();
- });
-});
+var layout = {
+geo:{
+scope: 'usa',
+showland: true,
+showlakes: true,
+lakecolor: 'rgb(255, 255, 255)',
+lonaxis: {},
+lataxis: {}
+}
+};
+Plotly.plot("chart1", data, layout, {showLink: false});
+}); 

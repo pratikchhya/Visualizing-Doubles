@@ -70,7 +70,7 @@ var icons = {
     })
 };
 
-d3.csv('map_df.csv', function(data) {
+d3.csv('beermap.csv', function(data) {
     
     var beerRating;
 
