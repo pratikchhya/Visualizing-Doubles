@@ -61,7 +61,7 @@ body {
     font-weight: 400;
     color: rgba(255, 255, 255, 0.842);
     text-align: justify;
-    background-color: rgb(0, 0, 0);
+    /* background-color: rgb(0, 0, 0); */
     width: 960px;
     height: 700px;
     margin-top: 10px;
@@ -164,7 +164,7 @@ text {
     shape-rendering: auto;
     fill-opacity: 0;
     stroke-width: 0.5px;
-    stroke: rgb(0, 0, 0);
+    /* stroke: rgb(0, 0, 0); */
     stroke-opacity: 0;
 }
 
