@@ -100,15 +100,3 @@ d3.csv('map_df.csv', function(data) {
     // Create legend
 
 });
-var legend = L.control({position: 'bottomright'});
-legend.onAdd = () => {
-    var div = L.DomUtil.create('div', 'info legend');
-    categories = ['okay','good','great'];
-    for (var i = 0; i < categories.length; i++) {
-        div.innerHTML +=
-            '<i style="background:' + L.ExtraMarkers.icon(categories[i]) + '"></i> ' +
-            (categories[i] ? categories[i] + '<br>' : '+');
-    }
-    return div;
-};
-legend.addTo(myMap);
