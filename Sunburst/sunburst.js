@@ -15,6 +15,7 @@ var myPlot = document.getElementById("myDiv"),
     description = beers.map(wheel => wheel.description);
     ABV = beers.map(wheel => wheel.ABV_RANGE);
     IBU = beers.map(wheel => wheel.IBU_RANGE);
+    // beerValues = beers2.map(wheel2 => wheel2.style);
     console.log(styles); // just a check for the output
     console.log(parent); // just a check for the output
     console.log(beerColors); // just a check for the output
@@ -25,17 +26,15 @@ var myPlot = document.getElementById("myDiv"),
         ids: styles,
         labels: styles,
         parents: parent,
-        // hovertext: description,
+        hovertext: description,
         meta: ABV,
         customdata: IBU,
-        // hovertemplate:
-        //   "<b> %{label} </b> <br>" +
-        //   "<b>Parent</b>: %{parent} <br>" +
-        //   "<b>ABV</b>: %{meta} <br>" +
-        //   "<b>IBU</b>: %{customdata}<br>" +
-        //   "<b>Sytle Info: </b> %{hovertext}",
-        // fillcolors: beerColors,
-        // values: [10, 14, 12, 10, 4, 6, 6, 4, 4, 3, 5, 6, 7, 6, 5, 4, 3],
+        hovertemplate: "<b> %{label} </b>",
+        // // +"<b>Parent</b>: %{parent} <br>" +
+        // "<b>ABV</b>: %{meta} <br>" +
+        // "<b>IBU</b>: %{customdata}<br>",
+        // +"<b>Sytle Info: </b> %{hovertext}",
+        // values: beerValues,
         leaf: { opacity: 0.5 },
         marker: {
           colors: beerColors,
@@ -49,26 +48,33 @@ var myPlot = document.getElementById("myDiv"),
       margin: { l: 0, r: 0, b: 0, t: 0 },
       paper_bgcolor: "rgba(0,0,0,0)",
       hovermode: "closest",
-      width: 500,
-      height: 500
+      width: 850,
+      height: 900
     };
 
     Plotly.plot("myDiv", data, layout);
 
     myPlot
       .on("plotly_hover", function(data) {
-        // var hoverInfo = document.getElementById("styleText");
         var infoText = data.points.map(function(d) {
-          return d.data.labels;
-          console.log(d.data.labels);
+          // return d.hovertext;
+          return (
+            "<b>Style: </b>" +
+            d.label +
+            "<br> <b>Parent: </b>" +
+            d.parent +
+            "<br><b>ABV: </b>" +
+            d.meta +
+            "<br><b>IBU: </b>" +
+            d.customdata +
+            "<br><br>" +
+            d.hovertext
+          );
         });
-        hoverInfo.append(infoText);
-        //       return (d.data.name + ': x= ' + d.x + ', y= ' + d.y.toPrecision(3));
 
         hoverInfo.innerHTML = infoText.join("<br/>");
       })
       .on("plotly_unhover", function(data) {
         hoverInfo.innerHTML = "";
-        // hoverInfo.html("");
       });
   });

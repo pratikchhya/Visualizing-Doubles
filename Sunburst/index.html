@@ -8,17 +8,17 @@
       rel="stylesheet"
       href="https://bootswatch.com/4/lux/bootstrap.min.css"
     />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    /> -->
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-    <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
-    <script src="https://cdn.anychart.com/releases/v8/js/anychart-tag-cloud.min.js"></script>
-    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-data-adapter.min.js"></script>
+    <!-- <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script> -->
+    <!-- <script src="https://cdn.anychart.com/releases/v8/js/anychart-tag-cloud.min.js"></script> -->
+    <!-- <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-data-adapter.min.js"></script> -->
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
@@ -27,7 +27,7 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-md-9">
+        <div class="col-lg-9">
           <br />
           <h3 class="title" style="text-align: center; font-size:50px;">
             Beer Styles
@@ -36,7 +36,7 @@
           <br />
           <div id="myDiv"></div>
         </div>
-        <div class="col-md-3">
+        <div class="col-lg-3">
           <br />
           <br />
           <h3 class="Style_Info" style="text-align: center">
@@ -45,35 +45,12 @@
           <br />
           <br />
           <div id="hoverinfo">
-            <h3 id="styleText"></h3>
+            <span id="styleText">
           </div>
         </div>
       </div>
     </div>
 
-    <!-- <div class="container">
-      <div class="row">
-        <div class="col-md-9">
-          <div id="myDiv"></div>
-        </div>
-        <div class="col-md-3">
-          <div id="table-area" class="">
-            <h4 class="Style_Info"><strong>Style Info</strong></h4>
-            <table id="style_table" class="table table-striped">
-              <thead>
-                <tr>
-                  <th class="table-head">ABV%</th>
-                  <th class="table-head">IBU</th>
-                  <th class="table-head">Style Description</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-            <br />
-          </div>
-        </div>
-      </div>
-    </div> -->
     <script src="sunburst.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

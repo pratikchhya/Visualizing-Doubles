@@ -1,210 +1,45 @@
-/* On mouse hover, lighten state color */
-path:hover {
+/* /* On mouse hover, lighten state color */
+/* path:hover {
     fill-opacity: .7;
     background-color: rgb(167, 77, 78);
-}
-
-
-#parent #popup {
-    display: none;
-}
-
-#parent:hover #popup {
-    display: block;
-}
-
-/* path:active {
-    color: rgb(167,77,78);
 } */
 
-/* Style for Custom Tooltip */
-div.tooltip {
-    position: absolute;
-    text-align: center;
-    width: 60px;
-    height: 28px;
-    padding: 2px;
-    font: 12px sans-serif;
-    background: white;
-    border: 0px;
-    border-radius: 8px;
-    pointer-events: none;
-}
 
-html {
+
+/* html {
     position: relative;
     min-height: 100%;
-}
-
-/* body {
-    margin-bottom: 150px;
-    background-color: beige;
-    font-family: 'Nunito', sans-serif;
 } */
 
-@media only screen and (max-width: 760px) {
-    body {
-        background-color: #cf0e0e;
-    }
-}
-
-/* @media only screen and (max-width: 760px) {
-    .navbar-header {
-        background-color: #e22323a2;
-        width: 100%;
-    }
-} */
-/* Legend Font Style */
 body {
+    background-color: black;
+    /* font-family: 'Verdana', sans-serif; */
     font-family: 'Open Sans', sans-serif;
     font-size: 12px;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.842);
-    text-align: justify;
-    /* background-color: rgb(0, 0, 0); */
-    width: 960px;
-    height: 700px;
-    margin-top: 10px;
-}
-
-/* Legend Position Style */
-.legend {
-    position: absolute;
-    left: 800px;
-    top: 350px;
-}
-
-@media only screen and (max-width: 760px) {
-    .navbar-header {
-        background-color: #ffffffa2;
-        width: 100%;
-    }
-}
-
-.footer {
-    /* position: absolute; */
-    bottom: 0;
-    padding-top: 5px;
-    width: 100%;
-    height: 30px;
-    margin-top: 15px;
-    background-color: #222222;
-}
-
-#myBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-    border: none;
-    outline: none;
-    background-color: red;
     color: white;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 10px;
-    font-size: 18px;
+    text-align: left;
+    /* width: 960px; */
+    /* height: 700px; */
+    /* margin-top: 10px; */
 }
 
-#myDiv:hover {
-    background-color: #555;
-}
-
-/* Tooltip container */
-.tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
-    /* If you want dots under the hoverable text */
-}
-
-/* Tooltip text */
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
+h3 {
+    color: white;
     text-align: center;
-    padding: 5px 0;
-    border-radius: 6px;
-
-    /* Position the tooltip text - see examples below! */
-    position: absolute;
-    z-index: 1;
 }
 
-/* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
-    visibility: visible;
+h4 {
+    color: white;
+    text-align: left;
 }
 
-.tooltip .tooltiptext {
-    width: 120px;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-    /* Use half of the width (120/2 = 60), to center the tooltip */
-}
 
-.tooltip .tooltiptext {
-    opacity: 0;
-    transition: opacity 1s;
-}
+/* #myDiv:hover {
+    background-color: #555;
+} */
 
-.tooltip:hover .tooltiptext {
-    opacity: 1;
-}
 
-text {
+/* text {
     font-size: 12px;
-}
-
-.mainBars rect {
-    shape-rendering: auto;
-    fill-opacity: 0;
-    stroke-width: 0.5px;
-    /* stroke: rgb(0, 0, 0); */
-    stroke-opacity: 0;
-}
-
-.subBars {
-    shape-rendering: crispEdges;
-}
-
-.edges {
-    stroke: none;
-    fill-opacity: 0.5;
-}
-
-.header {
-    text-anchor: middle;
-    font-size: 16px;
-}
-
-line {
-    stroke: grey;
-}
-
-.node circle {
-    fill: #999;
-}
-
-.node text {
-    font: 10px sans-serif;
-}
-
-.node--internal circle {
-    fill: #555;
-}
-
-.node--internal text {
-    text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
-}
-
-.link {
-    fill: none;
-    stroke: #555;
-    stroke-opacity: 0.4;
-    stroke-width: 1.5px;
-}
+} */
