@@ -49,6 +49,7 @@
 </head>
 
 <body>
+
     <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top p-1">
         <div class="container">
           <a class="navbar-brand" href="index.html">Beer</a>
@@ -102,12 +103,25 @@
     </div>
   </section>
 
-
       <div class="container">
         <div class="row">
-          <div class="col-md-12"> 
-                  <h3 class="title" style="text-align: center; font-size:50px; text-decoration: underline;">Beer Styles</h3>
-                    <div id="myDiv"></div>
+          <div class="col-md-9">
+            <br />
+            <h3 class="title" style="text-align: center; font-size:50px; text-decoration: underline;">Beer Styles</h3>
+            <br />
+            <br />
+            <div id="myDiv"></div>
+            <div id="popup" style="display: none">Description text here</div>
+          </div>
+          <div class="col-md-3">
+            <br />
+            <br />
+            <h3 class="Style_Info" style="text-align: center">
+              <strong>Style Info</strong>
+            </h3>
+            <br />
+            <br />
+            <h4 class="Style_text"></h4>
           </div>
         </div>
       </div>
@@ -158,6 +172,7 @@
               </div>
             </div>
 
+    <script src="js/config.js"></script>
 
     <script src="js/sunburst.js"></script>
     <script src="js/consumption.js"></script>
