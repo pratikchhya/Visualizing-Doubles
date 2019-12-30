@@ -17,17 +17,15 @@ anychart.onDocumentReady(function() {
       // set an array of angles at which the words will be laid out
       chart.angles([0]); 
       // // configure angles
-      chart.fromAngle(10);
-      chart.toAngle(100);
-      //chart.angles([0,-40,0]);
+      //chart.fromAngle(10);
+      //chart.toAngle(100);
+      chart.angles([10,-20,-10]);
 
       chart.hovered().fill("#006600");
 
       // create and configure a color scale.
-      chart.colorRange(true);
-  // set the color range length
-     chart.colorRange().length('80%');
-
+      //chart.colorRange(true);
+  
   
       // set text spacing
       chart.textSpacing(0.5);
