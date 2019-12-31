@@ -11,7 +11,7 @@ anychart.onDocumentReady(function() {
       var chart = anychart.tagCloud(data);
 
       // set a chart title
-      chart.title('30 Beer style with most beers');
+      //chart.title('30 Beer style with most beers');
 
 
       // set an array of angles at which the words will be laid out
