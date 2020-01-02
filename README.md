@@ -22,6 +22,7 @@ The data table section (data.html) shows the entire data set when loaded. The re
 Datatable is being displayed by calling a .js file with json entries for each record.
 
 ### Map
+The map shows all the breweries in US from the data we have collected. Clicking on the marker will show the name of the breweries and their respective ratings. The control buttons which are located on the top right corner lets you filter the breweries by their ratings. Breweries with a rating of less than 4 are marked red, between 4.1 to 4.5 are marked blue and greater than 4.5 are marked purple.
 
 ### Challenges/Limitations: 
 
