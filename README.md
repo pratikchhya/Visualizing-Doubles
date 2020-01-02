@@ -13,15 +13,28 @@ The dataset had ______ number of columns and ______  number of rows. Since our d
 
 ## Data Table 
 
-The data table section (data.html) shows the entire data set when loaded. The records are filterable by 5 fields:
+The data table section (data.html) shows the entire data set when loaded. The records are filterable by 4 fields:
 
  - Brewery Names
- - City
+ - State
  - Beery Style
  - Brewery Ratings
 
-Datatable is being displayed by calling a .js file with json entries for each record.
+Datatable is being displayed by calling a .js file with json entries for each record which was created by running a simple csv to json conversion.
 
+```python
+import csv
+import json
+
+csvfile = open('final_beer.csv', 'r')
+jsonfile = open('final_beer.json', 'w')
+
+fieldnames = ("index","brewery_name","city","state","beer_name","style","latitude","longitude","rating","abv_percent")
+reader = csv.DictReader( csvfile, fieldnames)
+for row in reader:
+    json.dump(row, jsonfile)
+    jsonfile.write(',\n')
+```
 ## Map 
 The map shows all the breweries in US from the data we have collected. Due to the large number of records which has resulted the page to load very slowly, we decided to only show the first 1500 records from our data. 
 
