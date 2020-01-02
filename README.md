@@ -21,9 +21,10 @@ CSS
 The dataset had ______ number of columns and ______  number of rows. Since our dataset was so large, we had to remove unnecessary data by using Pandas. Our final dataset which only consists of breweries located in US resulting in ______ data. 
 
 ## Data Visualization (JavaScript library used)
-#### Sunburst chart:
-#### Choropleth:
-#### Word cloud:
+#### Sunburst chart: Plotly
+#### Choropleth: Plotly
+#### Word cloud: Anychart
+#### Map: D3, Leafletjs
 
 ## Data Table 
 
