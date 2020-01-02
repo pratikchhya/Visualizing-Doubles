@@ -11,7 +11,8 @@ To answer these questions, we cleaned our dataset and later built a web applicat
 
 The dataset had ______ number of columns and ______  number of rows. Since our dataset was so large, we had to remove unnecessary data by using Pandas. Our final dataset which only consists of breweries located in US resulting in ______ data. 
 
-### Data Table <br/>
+## Data Table 
+
 The data table section (data.html) shows the entire data set when loaded. The records are filterable by 5 fields:
 
  - Brewery Names
@@ -21,7 +22,7 @@ The data table section (data.html) shows the entire data set when loaded. The re
 
 Datatable is being displayed by calling a .js file with json entries for each record.
 
-### Map <br/>
+## Map 
 The map shows all the breweries in US from the data we have collected. Due to the large number of records which has resulted the page to load very slowly, we decided to only show the first 1500 records from our data. 
 
 #### Getting Coordinates
@@ -33,9 +34,9 @@ The map was possible using Leaflet Extra Markers and Font Awesome. Clicking on t
 
 ### Challenges/Limitations: 
 
-### Contributors <br/>
- Sai
- Dan
- Deepen
- Pratikchhya
- Pavana
+## Contributors <br/>
+ - Sai
+ - Dan
+ - Deepen
+ - Pratikchhya
+ - Pavana
