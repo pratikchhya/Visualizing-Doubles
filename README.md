@@ -22,13 +22,20 @@ The data table section (data.html) shows the entire data set when loaded. The re
 Datatable is being displayed by calling a .js file with json entries for each record.
 
 ### Map
-The map shows all the breweries in US from the data we have collected. Clicking on the marker will show the name of the breweries and their respective ratings. The control buttons which are located on the top right corner lets you filter the breweries by their ratings. Breweries with a rating of less than 4 are marked red, between 4.1 to 4.5 are marked blue and greater than 4.5 are marked purple.
+The map shows all the breweries in US from the data we have collected. Due to the large number of records which has resulted the page to load very slowly, we decided to only show the first 1500 records from our data. 
+
+#### Getting Coordinates
+The data file only had the list of brewery names, city and state. To map each breweries, we used Google Maps API to get the coordinates.
+
+The map was possible using Leaflet Extra Markers and Font Awesome. Clicking on the marker will show the name of the breweries and their respective ratings. The control buttons which are located on the top right corner lets you filter the breweries by their ratings. Breweries with a rating of less than 4 are marked red, between 4.1 to 4.5 are marked blue and greater than 4.5 are marked purple.
+
+![map.png](map.png)
 
 ### Challenges/Limitations: 
 
 ### Contributors
-Sai
-Dan
-Deepen
-Pratikchhya
-Pavana
+ Sai
+ Dan
+ Deepen
+ Pratikchhya
+ Pavana
