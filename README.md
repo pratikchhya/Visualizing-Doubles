@@ -1,9 +1,9 @@
 # Beertopia
 
 For beer enthusiasts, the craft beer segment of the alcohol and beverages industry has a ton of options. Some of the questions that are relevant for beer enthusiasts are as follows:-
-How are craft beers differentiated?
-What are the most common beer styles consumed in the US?
-What are the states with the most craft beer consumption?
+- How are craft beers differentiated?
+- What are the most common beer styles consumed in the US?
+- What are the states with the most craft beer consumption?
 
 To answer these questions, we cleaned our dataset and later built a web application that shows various beer styles, a map showing the state with most beer consumption, a data table, and a map showing brewering ratings.
 
@@ -35,6 +35,11 @@ for row in reader:
     json.dump(row, jsonfile)
     jsonfile.write(',\n')
 ```
+The purpose of showing a data table is to have users answer the following questions:
+- Which breweries are located near me (or to a particular place)?
+- Which beers are produced by these breweries (with ratings and abv info)?
+- Which beers have the best rating?
+
 ## Map 
 The map shows all the breweries in US from the data we have collected. Due to the large number of records which has resulted the page to load very slowly, we decided to only show the first 1500 records from our data. 
 
