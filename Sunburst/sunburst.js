@@ -1,9 +1,7 @@
-// get the data from CSV
-
-// Defining the data for the sunburst
-
+// Map the HTML DIVs and define the data for the sunburst
 var myPlot = document.getElementById("myDiv"),
   hoverInfo = document.getElementById("styleText"),
+  // get the data from CSV
   beers = d3.csv("beer_styles.csv").then(function(beers) {
     console.log(beers),
       // define var STYLE and PARENT
@@ -15,6 +13,7 @@ var myPlot = document.getElementById("myDiv"),
     description = beers.map(wheel => wheel.description);
     ABV = beers.map(wheel => wheel.ABV_RANGE);
     IBU = beers.map(wheel => wheel.IBU_RANGE);
+
     // beerValues = beers2.map(wheel2 => wheel2.style);
     console.log(styles); // just a check for the output
     console.log(parent); // just a check for the output
@@ -35,10 +34,13 @@ var myPlot = document.getElementById("myDiv"),
         // "<b>IBU</b>: %{customdata}<br>",
         // +"<b>Sytle Info: </b> %{hovertext}",
         // values: beerValues,
-        leaf: { opacity: 0.5 },
+        // leaf: { opacity: 0.5 },
         marker: {
           colors: beerColors,
-          line: { width: 2 }
+          line: {
+            width: 1
+            // color: "gray"
+          }
         }
       }
     ];

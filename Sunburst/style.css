@@ -12,12 +12,12 @@
 } */
 
 body {
-    background-color: black;
-    /* font-family: 'Verdana', sans-serif; */
-    font-family: 'Open Sans', sans-serif;
+    /* background-color: black; */
+    font-family: 'Verdana', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
     font-size: 12px;
     font-weight: 400;
-    color: white;
+    color: black;
     text-align: left;
     /* width: 960px; */
     /* height: 700px; */
@@ -25,12 +25,12 @@ body {
 }
 
 h3 {
-    color: white;
+    color: black;
     text-align: center;
 }
 
 h4 {
-    color: white;
+    color: black;
     text-align: left;
 }
 
