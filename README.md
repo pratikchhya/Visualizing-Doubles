@@ -52,14 +52,14 @@ style_df.head()
 
 ## Data Table 
 
-The data table section (data.html) shows the entire data set when loaded. The records are filterable by 4 fields:
+The data table section (data.html) shows the entire brewery dataset. The records are filterable by 4 fields:
 
  - Brewery Names
  - State
  - Beer Style
  - Brewery Ratings
 
-Datatable is being displayed by calling a .js file with json entries for each record which was created by running a simple csv to json conversion.
+Datatable is being displayed by calling a .js file with json entries for each record which was created by running a simple csv to json conversion using python.
 
 ```python
 import csv
@@ -101,7 +101,7 @@ Navigate to your project in the git bash.
 ```
 cd Final
 ```
-Create an index.php file. The purpose of this file is to trick Heroku to deploy a static site by including 1 dynamic file which it recognizes. In simple terms, you are trying to masquerade the HTML app which you build build as a PHP application. Add the following code into the index.php.
+Create an index.php file. The purpose of this file is to trick Heroku to deploy a static site by including 1 dynamic file which it recognizes. In simple terms, you are trying to masquerade the HTML app which you build as a PHP application. Add the following code into the index.php. PHP is one of the most preferred programming language for website development as PHP can be easily embedded into HTML code.
 ```
 <?php header( 'Location: /index.html' ) ;  ?>
 ```
@@ -123,8 +123,7 @@ Insert your desired name instead of my-website-name.
 ```
 git push heroku master
 ```
-You are done
-You can now visit your site at https://my-website-name.herokuapp.com/.
+You should be able to visit your site at https://my-website-name.herokuapp.com/.
 If you need to make changes to your site after deployment, please follow below steps:
 After adding the changes to your code. Run the following commands in git bash one at a time.
 ```
