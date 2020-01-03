@@ -18,7 +18,7 @@ CSS / Bootstrap
 
 ## Data Clean Up Process:
 
-The dataset had 12 number of columns and 2410 number of rows. Since our dataset was so large, we had to remove unnecessary data by using Pandas. Our final dataset which only consists of breweries located in US resulting in 1358 rows of data. 
+The dataset had 12 number of columns and 2410 number of rows. Since our dataset was so large, we had to remove unnecessary data by using Pandas. Our final dataset which only consists of breweries located in US resulting in 9 columns and 2255 rows of data.
 
 Open Git bash, activate your python environment and install libraries mentioned below:-
  * pandas
@@ -35,12 +35,19 @@ Create 2 Jupyter Notebooks:-
 
 2)  Scrape beer consumption data using BeautifulSoup and import into jupyter notebook. Data munge and format the data into a pandas DataFrame. Export to CSV for data visualization.
 
+## Local Database
+
+PostGres used to store data from Jupyter Notebook. Two tables created :-
+
+1)  Table with breweries and beers data from the first notebook.
+2)  Table with beer consumption per state from the second notebook
 
 
 ## Data Visualization (JavaScript library used)
 #### Sunburst chart: Plotly
 #### Choropleth: Plotly
 #### Word cloud: Anychart
+ - Word cloud shows thirty most used beer style in the United States. The font size is dictated by the number of beer types associated with that particular beer style. When hovered over it shows beer style and number of beers associated with it.
  - Data for word cloud was modified from beers_df.csv.  Only beer style name and beer counts were needed. To get the desired top thirty beer style with beer counts, jupyter notebook was used to munge the data. Shows thirty most used beer style in the United States.
 
 ```pandas
