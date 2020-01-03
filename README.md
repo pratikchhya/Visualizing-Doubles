@@ -37,7 +37,7 @@ The data table section (data.html) shows the entire data set when loaded. The re
 
 Datatable is being displayed by calling a .js file with json entries for each record which was created by running a simple csv to json conversion.
 
-```
+```python
 import csv
 import json
 
