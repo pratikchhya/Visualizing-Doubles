@@ -139,6 +139,8 @@ git push heroku master
 - The rating for individual beer was not available, the indicated rating in data page is for brewery as a whole. 
 - One of the data sources did not had beer style defined.
 
+## Next Steps:
+- 
 
 ## Contributors 
  - Sai
