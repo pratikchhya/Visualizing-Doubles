@@ -48,7 +48,7 @@ The data table section (data.html) shows the entire data set when loaded. The re
 
  - Brewery Names
  - State
- - Beery Style
+ - Beer Style
  - Brewery Ratings
 
 Datatable is being displayed by calling a .js file with json entries for each record which was created by running a simple csv to json conversion.
