@@ -32,7 +32,7 @@ Create 2 Jupyter Notebooks:-
 
 1)  Load breweries and beers CSVs into jupyter notebook. Make Google Place API calls for each brewery to extract latitude, longitude, and ratings data. Munge data to create a final DataFrame. Export to CSV for data visualization.
 
-2)  Scrape beer consumption data using BeautifulSoup and import into jupyter notebook. Data munge and format the data into a pandas DataFrame. Export to CSV for data visualization
+2)  Scrape beer consumption data using BeautifulSoup and import into jupyter notebook. Data munge and format the data into a pandas DataFrame. Export to CSV for data visualization.
 
 
 
