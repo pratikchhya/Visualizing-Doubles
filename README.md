@@ -9,16 +9,32 @@ To answer these questions, we cleaned our dataset and later built a web applicat
 
 ## Technologies used:
 ```
-Pandas
-Python
+Python / Pandas
 Javascript
 Html
-CSS
+CSS / Bootstrap
 ```
 
 ## Data Clean Up Process:
 
-The dataset had ______ number of columns and ______  number of rows. Since our dataset was so large, we had to remove unnecessary data by using Pandas. Our final dataset which only consists of breweries located in US resulting in ______ data. 
+The dataset had 12 number of columns and 2410 number of rows. Since our dataset was so large, we had to remove unnecessary data by using Pandas. Our final dataset which only consists of breweries located in US resulting in 1358 rows of data. 
+
+Open Git bash, activate your python environment and install libraries mentioned below:-
+ * pandas
+ * sqlalchemy
+ * psycopg2
+ * bs4
+ * datetime
+
+Sign up for Google API and acquire key to copy. Create “config.py” file in the root directory and assign Google API key as “gkey” in the config file.
+
+Create 2 Jupyter Notebooks:-
+
+i. Load breweries and beers CSVs into jupyter notebook. Make Google Place API calls for each brewery to extract latitude, longitude, and ratings data. Munge data to create a final DataFrame. Export to CSV for data visualization.
+
+ii. Scrape beer consumption data using BeautifulSoup and import into jupyter notebook. Data munge and format the data into a pandas DataFrame. Export to CSV for data visualization
+
+
 
 ## Data Visualization (JavaScript library used)
 #### Sunburst chart: Plotly
