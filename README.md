@@ -68,15 +68,6 @@ PostGres used to store data from Jupyter Notebook. Two tables created :
 #### Beer Style wheel (Plotly Sunburst)
 #### Consumption map (Plotly Choropleth)
 #### Beer Style Frequency (Anychart Word Cloud)
- - Word cloud shows thirty most used beer style in the United States. The font size is dictated by the number of beer types associated with that particular beer style. When hovered over it shows beer style and number of beers associated with it.
- - Data for word cloud was modified from beers_df.csv.  Only beer style name and beer counts were needed. To get the desired top thirty beer style with beer counts, jupyter notebook was used to munge the data. Shows thirty most used beer style in the United States.
-
-```pandas
-df_style=beer_data[["style","beer_name"]]
-style_df=df_style.groupby(['style']).count()
-style_df= style_df.sort_values(['beer_name'], ascending=False)
-style_df.head()
-```
 
 ## Data Table 
 
