@@ -7,6 +7,27 @@ For beer enthusiasts, the craft beer segment of the alcohol and beverages indust
 
 To answer these questions, we cleaned our dataset and later built a web application that shows various beer styles, a map showing the state with most beer consumption, a data table, and a map showing brewering ratings.
 
+### Data Sources:
+Beers and Breweries 
+- 2 datasets from Kaggle were used. One for US craft breweries and another for beers: https://www.kaggle.com/ritesaluja/the-beer/data
+
+Google Places 
+- API interactions to retrieve geolocation data and brewery ratings.
+
+Web Scrape 
+- Scrape data for beer consumption by state: https://www.thrillist.com/drink/nation/beer-consumption-by-state/3973432
+
+Beer Styles
+- a research was made to create a family tree of beer styles, defining the parent for each beer style, ABV, IBU and a description of the style. The sources to map and define the family tree used were:
+  - www.beeradvocate.com
+  - www.brewersassociation.org
+  - www.beerspot.com
+  - www.ratebeer.com
+
+### API Keys Required:
+- Google API (console.developers.google.com/getting-started)
+- Mapbox API (mapbox.com)
+
 ## Technologies used:
 ```
 Python / Pandas
@@ -147,7 +168,11 @@ git push heroku master
 - One of the data sources did not had beer style defined.
 
 ## Next Steps:
-- 
+- Make the application dynamic to make it interactive with users ( i.e users could rate beers or add brewery information)
+- Add beer rating information.
+- Provide an accurate street address for each brewery.
+- Evaluate adding more fun charts.
+
 
 ## Contributors 
  - Sai
