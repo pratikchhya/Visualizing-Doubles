@@ -164,6 +164,7 @@ git push heroku master
 - Add beer rating information.
 - Provide an accurate street address for each brewery.
 - Evaluate adding more fun charts.
+- Dictionary of terms.
 
 
 ## Contributors 
