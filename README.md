@@ -42,11 +42,11 @@ CSS / Bootstrap
 The dataset had 12 number of columns and 2410 number of rows. Since our dataset was so large, we had to remove unnecessary data by using Pandas. Our final dataset which only consists of breweries located in US resulting in 9 columns and 2255 rows of data.
 
 Open Git bash, activate your python environment and install libraries mentioned below:
- * pandas
- * sqlalchemy
- * psycopg2
- * bs4
- * datetime
+ * Pandas
+ * Sqlalchemy
+ * Psycopg2
+ * Bs4
+ * Datetime
 
 Sign up for Google API and acquire key to copy. Create “config.py” file in the root directory and assign Google API key as “gkey” in the config file.
 
@@ -172,5 +172,17 @@ git push heroku master
  - Deepen
  - Pratikchhya
  - Pavana
+
+## How to run the application on live server
+ - Git clone the final folder
+ - Open Git bash
+ - Find the folder and run the following command
+```
+cd final
+```
+```
+python -m http.server
+```
+ - Open web browser and access your localhost i.e http://localhost:8000/ 
 
 ### Production Website - https://visualizing-doubles.herokuapp.com/index.html
