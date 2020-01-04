@@ -69,7 +69,7 @@ PostGres used to store data from Jupyter Notebook. Two tables created :
 #### Consumption map (Plotly Choropleth)
 #### Beer Style Frequency (Anychart Word Cloud)
 
-## Map 
+## Map (D3, Leaflet)
 The map shows all the breweries in US from the data we have collected. Due to the large number of records which has resulted the page to load very slowly, we decided to only show the first 1500 records from our data. 
 
 #### Getting Coordinates
