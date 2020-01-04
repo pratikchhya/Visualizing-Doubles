@@ -13,6 +13,9 @@ colorscale: [
 [0.4, 'rgb(255,191,0)'], [0.6, 'rgb(242,142,28)'],
 [0.8, 'rgb(165,42,42)'], [1, 'rgb(165,42,42)']
 ],
+colorbar: {
+  title: 'Gallons'
+},
 }];
 
 var layout = {
