@@ -154,9 +154,10 @@ git push heroku master
 ```
 
 ## Challenges/Limitations: 
-- Some of the brewery location values(latitude, longitude) has been approximated.
-- The rating for individual beer was not available, the indicated rating in data page is for brewery as a whole. 
-- One of the data sources did not had beer style defined.
+- For Breweries with multiple locations - Google API provided the first address it was able to find even though that might not be the actual one.  
+- The rating for individual beers were not available, the indicated rating in datatable is for brewery as a whole. 
+- Using multiple data sources
+- We had to create a family tree to connect beers and their style. 
 
 ## Next Steps:
 - Make the application dynamic to make it interactive with users ( i.e users could rate beers or add brewery information)
