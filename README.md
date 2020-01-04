@@ -69,6 +69,16 @@ PostGres used to store data from Jupyter Notebook. Two tables created :
 #### Consumption map (Plotly Choropleth)
 #### Beer Style Frequency (Anychart Word Cloud)
 
+## Map 
+The map shows all the breweries in US from the data we have collected. Due to the large number of records which has resulted the page to load very slowly, we decided to only show the first 1500 records from our data. 
+
+#### Getting Coordinates
+The data file only had the list of brewery names, city and state. To map each breweries, we used Google Maps API to get the coordinates.
+
+The map was possible with use of Leaflet Extra Markers and Font Awesome (https://github.com/coryasilva/Leaflet.ExtraMarkers). Clicking on the marker will show the name of the breweries and their respective ratings. The control buttons which are located on the top right corner lets you filter the breweries by their ratings. Breweries with a rating of less than 4 are marked red, between 4.1 to 4.5 are marked blue and greater than 4.5 are marked purple.
+
+![markers_default.png](markers_default.png)
+
 ## Data Table 
 
 The data table section (data.html) shows the entire brewery dataset. The records are filterable by 4 fields:
@@ -97,16 +107,6 @@ The purpose of showing a data table is to have users answer the following questi
 - Which breweries are located near me (or to a particular place)?
 - Which beers are produced by these breweries (with ratings and abv info)?
 - Which beers have the best rating?
-
-## Map 
-The map shows all the breweries in US from the data we have collected. Due to the large number of records which has resulted the page to load very slowly, we decided to only show the first 1500 records from our data. 
-
-#### Getting Coordinates
-The data file only had the list of brewery names, city and state. To map each breweries, we used Google Maps API to get the coordinates.
-
-The map was possible with use of Leaflet Extra Markers and Font Awesome (https://github.com/coryasilva/Leaflet.ExtraMarkers). Clicking on the marker will show the name of the breweries and their respective ratings. The control buttons which are located on the top right corner lets you filter the breweries by their ratings. Breweries with a rating of less than 4 are marked red, between 4.1 to 4.5 are marked blue and greater than 4.5 are marked purple.
-
-![map.png](map.png)
 
 ## Heroku Deployment
 Heroku is a hosting platform where you can deploy dynamic applications using any of the following web applications: Rails, PHP, Node.js and Python.
