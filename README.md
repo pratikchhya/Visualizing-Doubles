@@ -106,7 +106,7 @@ for row in reader:
 The purpose of showing a data table is to have users answer the following questions:
 - Which breweries are located near me (or to a particular place)?
 - Which beers are produced by these breweries (with ratings and abv info)?
-- Which beers have the best rating?
+- Which breweries have the best rating?
 
 ## Heroku Deployment
 Heroku is a hosting platform where you can deploy dynamic applications using any of the following web applications: Rails, PHP, Node.js and Python.
