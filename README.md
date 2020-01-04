@@ -18,7 +18,7 @@ Web Scrape
 - Scrape data for beer consumption by state: https://www.thrillist.com/drink/nation/beer-consumption-by-state/3973432
 
 Beer Styles
-- a research was made to create a family tree of beer styles, defining the parent for each beer style, ABV, IBU and a description of the style. The sources to map and define the family tree used were:
+- The sources to map and define the family tree used were:
   - www.beeradvocate.com
   - www.brewersassociation.org
   - www.beerspot.com
