@@ -67,7 +67,7 @@ PostGres used to store data from Jupyter Notebook. Two tables created :
 ## Data Visualization (JavaScript library used)
 #### Beer Style wheel (Plotly Sunburst)
 #### Consumption map (Plotly Choropleth)
-#### Beer Style Word cloud Anychart
+#### Beer Style Weight (Anychart Word Cloud)
  - Word cloud shows thirty most used beer style in the United States. The font size is dictated by the number of beer types associated with that particular beer style. When hovered over it shows beer style and number of beers associated with it.
  - Data for word cloud was modified from beers_df.csv.  Only beer style name and beer counts were needed. To get the desired top thirty beer style with beer counts, jupyter notebook was used to munge the data. Shows thirty most used beer style in the United States.
 
