@@ -1,6 +1,6 @@
 # Beertopia
 
-For beer enthusiasts, the craft beer segment of the alcohol and beverages industry has a ton of options. Some of the questions that are relevant for beer enthusiasts are as follows:-
+For beer enthusiasts, the craft beer segment of the alcohol and beverages industry has a ton of options. Some of the questions that are relevant for beer enthusiasts are as follows:
 - How are craft beers differentiated?
 - What are the most common beer styles consumed in the US?
 - What are the states with the most craft beer consumption?
@@ -41,7 +41,7 @@ CSS / Bootstrap
 
 The dataset had 12 number of columns and 2410 number of rows. Since our dataset was so large, we had to remove unnecessary data by using Pandas. Our final dataset which only consists of breweries located in US resulting in 9 columns and 2255 rows of data.
 
-Open Git bash, activate your python environment and install libraries mentioned below:-
+Open Git bash, activate your python environment and install libraries mentioned below:
  * pandas
  * sqlalchemy
  * psycopg2
@@ -50,7 +50,7 @@ Open Git bash, activate your python environment and install libraries mentioned 
 
 Sign up for Google API and acquire key to copy. Create “config.py” file in the root directory and assign Google API key as “gkey” in the config file.
 
-Create 2 Jupyter Notebooks:-
+Create 2 Jupyter Notebooks:
 
 1)  Load breweries and beers CSVs into jupyter notebook. Make Google Place API calls for each brewery to extract latitude, longitude, and ratings data. Munge data to create a final DataFrame. Export to CSV for data visualization.
 
@@ -58,16 +58,16 @@ Create 2 Jupyter Notebooks:-
 
 ## Local Database
 
-PostGres used to store data from Jupyter Notebook. Two tables created :-
+PostGres used to store data from Jupyter Notebook. Two tables created :
 
 1)  Table with breweries and beers data from the first notebook.
 2)  Table with beer consumption per state from the second notebook
 
 
 ## Data Visualization (JavaScript library used)
-#### Sunburst chart: Plotly
-#### Choropleth: Plotly
-#### Word cloud: Anychart
+#### Beer Style wheel (Plotly Sunburst)
+#### Consumption map (Plotly Choropleth)
+#### Beer Style Word cloud Anychart
  - Word cloud shows thirty most used beer style in the United States. The font size is dictated by the number of beer types associated with that particular beer style. When hovered over it shows beer style and number of beers associated with it.
  - Data for word cloud was modified from beers_df.csv.  Only beer style name and beer counts were needed. To get the desired top thirty beer style with beer counts, jupyter notebook was used to munge the data. Shows thirty most used beer style in the United States.
 
